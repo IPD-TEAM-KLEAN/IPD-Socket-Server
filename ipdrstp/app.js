@@ -3,6 +3,6 @@ const app = require('express')(),
   io = require('socket.io')(server),
   rtsp = require('rtsp-ffmpeg');
 server.listen(6148); //열고싶은 포트번호 입력
-app.get('/', function (req, res) {
+app.get('/cam/1', function (req, res) {
   res.sendFile(__dirname + '/index.html');
 });
